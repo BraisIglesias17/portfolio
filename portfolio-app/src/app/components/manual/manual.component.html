@@ -1,0 +1,9 @@
+<div class="manual">
+    <p class="title">Brais tool documentation</p>
+
+
+    <div *ngFor="let command of commands" class="command">
+        <b><i><p>{{ command.title }}</p></i></b> <p>&nbsp; - &nbsp;</p> <p>{{ command.description }}</p>
+    </div>
+    <p><b>Note</b>: By adding the parameter -l to any command additional information will be retreived</p>
+</div>

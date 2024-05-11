@@ -1,0 +1,18 @@
+<div class="terminal">
+    <div class="terminal__header">Brais Console</div>
+    <div class="terminal__body" #terminalBody>
+      <div>
+        ##########################################################<br>
+        ##########################################################<br>
+        ###&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###<br>
+        ###&nbsp;&nbsp;Welcome to <span style="color: aqua;">Brais Iglesias</span> career explorer tool &nbsp;&nbsp;&nbsp;###<br>
+        ###&nbsp;&nbsp;To get the available commands type <span style="color: brown;"><i>get help</i></span>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###<br>
+        ###&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;###<br>
+        ##########################################################<br>
+        ##########################################################<br>
+      </div>
+      <div *ngFor="let message of messages" class="terminal__messages" [innerHTML]="message"></div>
+      <div class="terminal__prompt">{{ prompt }}</div>
+      <input type="text" [(ngModel)]="command" (keyup.enter)="executeCommand()">
+    </div>
+  </div>
